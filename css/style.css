@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h2 {
+  font-size: 28px;
+}
+
+img {
+  transition: 0.7s;
+}
+
+img:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+}
+
+nav .logo {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+nav .logo a {
+  color: black;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  width: 40%;
+}
+
+nav ul li a {
+  color: black;
+}
+
+nav ul li.active {
+  font-weight: 600;
+}
+
+/* Button */
+.btn-primary {
+  background-color: black;
+  color: #fff;
+  border: 2px solid black;
+  border-radius: 0 15px 0 15px;
+  padding: 15px 20px;
+  transition: 0.6s;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+}
+
+/* Flex */
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Section Home */
+#home svg {
+  width: 550px;
+}
+
+#home .row .col:nth-child(2) {
+  margin-top: -100px;
+  width: 45%;
+}
+
+#home h2 {
+  font-size: 56px;
+  margin-bottom: 10px;
+}
+
+#home a {
+  position: absolute;
+  margin-top: 10px;
+}
+
+/* Section Destinasi */
+#destinasi {
+  margin-top: 50px;
+}
+
+#destinasi .row {
+  width: 100%;
+}
+
+#destinasi .col {
+  margin-top: 50px;
+}
+
+#destinasi .col img {
+  width: 200px;
+  border-radius: 5px;
+}
+
+#destinasi .col p {
+  text-align: center;
+  font-weight: 500;
+  width: 80%;
+  padding: 10px 5px;
+}
+
+#destinasi .col a.btn-primary {
+  border-radius: 5px;
+  position: absolute;
+  margin-top: 10px;
+  width: 158px;
+  text-align: center;
+}
+
+/* Section hotel */
+#hotel {
+  margin-top: 250px;
+}
+
+#hotel .row {
+  width: 100%;
+}
+
+#hotel .col {
+  margin-top: 50px;
+}
+
+#hotel .col img {
+  width: 200px;
+  border-radius: 5px;
+}
+
+#hotel .col p {
+  text-align: center;
+  font-weight: 500;
+  width: 80%;
+  padding: 10px 5px;
+}
+
+#hotel .col a.btn-primary {
+  border-radius: 5px;
+  position: absolute;
+  margin-top: 10px;
+  width: 158px;
+  text-align: center;
+}
+
+/* Auth */
+
+#auth .form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#auth .form h2 {
+  margin-bottom: 30px;
+}
+
+#auth .form p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#auth .form p > a {
+  font-weight: 600;
+}
+
+#auth .form .form-group {
+  width: 270px;
+  padding: 10px 0;
+}
+
+#auth .form .form-group label {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#auth .form .form-group input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 15px 0;
+  width: 100%;
+  font-size: 18px;
+}
+
+#auth .form .btn-primary {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 150px;
+  padding: 50px;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  nav {
+    display: block;
+  }
+
+  nav .logo {
+    padding: 0 20px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  /* Menu */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    float: right;
+    padding: 0 20px;
+    margin-top: -30px;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+  }
+
+  .menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: 14px;
+    top: -4px;
+    opacity: 0;
+    z-index: 2;
+  }
+
+  .menu-toggle span {
+    transition: all 0.4s ease;
+  }
+
+  .menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+  }
+
+  .menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+  }
+
+  .menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+  }
+  .menu-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+  }
+
+  .menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+  }
+
+  .menu-toggle input:checked nav {
+    display: flex;
+  }
+}
